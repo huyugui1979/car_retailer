@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+/*style="padding-left:80px; align-items: center;"*/
+
+.home{
+
+}
+.show{
+    height:200px;
+    float:left;
+    width: auto;
+    border-radius:10px;
+    overflow:hidden;
+    text-align: center;
+}
+
+.show-img{
+    width: 350px;
+}
+
+
+.col{
+    margin:2px;
+    height:85px;
+    text-align:center;
+    line-height:30px;
+    padding: 10px;
+}
+.col .icon{
+    font-size:32px;
+}

@@ -1,0 +1,41 @@
+<ion-view view-title="取消预约">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="back()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="order" style="">
+        <div class="list list-inset">
+
+            <label class="item item-input">
+                <input type="text" placeholder="姓名" class="order-input" ng-model="id">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="联系电话" class="order-input" ng-model="number">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="您要预约的时间" class="order-input" ng-model="date">
+            </label>
+            <h4>选择的服务项目</h4>
+            <select class="service" id="mu">
+                <option value="fiat" selected="selected">汽车维修</option>
+                <option value="volvo">更换零部件</option>
+                <option value="saab" >汽车保养</option>
+                <option value="audi" >汽车改装</option>
+            </select>
+
+        </div>
+        <div class="order-button">
+            <button class="button button-assertive" ng-click="showConfirm()" style="width: 100%">取消预约</button>
+        </div>
+
+
+    </ion-content>
+
+
+
+</ion-view>

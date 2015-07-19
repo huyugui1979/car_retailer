@@ -1,0 +1,56 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-dark">
+        <h1 class="title">注册用户</h1>
+
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="register">
+            <div class="list">
+
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">填写你喜欢的昵称吧>.<</span>
+                        <input type="text" placeholder="用户名" ng-model="customer">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">下次登陆记得选记住密码哟+_+</span>
+                        <input type="password" placeholder="密码">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">以后我们就可以常联系啦^_^</span>
+                        <input type="text" placeholder="联系方式">
+                    </label>
+                        <!--<label class="item item-input item-select">-->
+                            <!--<div class="input-label">-->
+                                <!--我猜你是-->
+                            <!--</div>-->
+                            <!--<select>-->
+                                <!--<option>先生</option>-->
+                                <!--<option selected>女士</option>-->
+
+                            <!--</select>-->
+                        <!--</label>-->
+
+
+                    <label class="item item-input item-select">
+
+                        <div class="input-label">
+
+                        </div>
+
+                        <select >
+                            <option >女士</option>
+                            <option >先生</option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">还差一步就成功啦，干巴爹！</span>
+                        <input type="text" placeholder="邮箱">
+                    </label>
+
+                <button class="button button-block button-calm" type="submit" ng-click="showAlert()">注册</button>
+                <button class="button button-block button-assertive" type="cancel" ng-click="back()">待会再来吧</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

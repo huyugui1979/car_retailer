@@ -1,0 +1,49 @@
+<ion-view title="意见反馈">
+    <ion-nav-bar class="bar bar-dark">
+        <ion-nav-buttons side="left">
+            <button  class="button  button-dark " menu-toggle="right" ng-click="back()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="has-header padding" scroll="true">
+        <form name="frmEdit">
+            <div class="custom-form-list list">
+                <label class="item item-input">
+                    <i class="icon ion-alert-circled placeholder-icon assertive"
+                       ng-show="!frmEdit.title.$pristine && frmEdit.title.$invalid"></i>
+                    <input name="title" type="text" placeholder="Title"
+                           ng-model="expense.title" ng-maxlength="55" required>
+                </label>
+                <!--<label class="item item-stable-label">-->
+                <!--<tr>-->
+                        <!--<input type="file" id="f" accept="image/png" onchange="show()"/>-->
+                    <!--&lt;!&ndash;<img id="img" width="500" height="300" />&ndash;&gt;-->
+                <div class="list card">
+                    <div class="item item-body">
+                        <img class="full-image" src="">
+                        <p>
+                            click select button below（点击下面选择图片的按钮，选择你要展示的图片）
+                        </p>
+                    </div>
+
+                </div>
+                <button class="button button-full button-positive" ng-click="pickImage()">
+                    上传图片
+                </button>
+
+                <label class="item item-input">
+                    <textarea placeholder="Description" ></textarea>
+                </label>
+
+            </div>
+
+            <div class="button-bar">
+                <button type="button" class="button button-dark icon-left ion-close-circled"
+                        on-tap="cancel()">取消</button>
+                <button type="button" class="button button-stable icon-left ion-checkmark-circled"
+                        on-tap="addExpense()">提交</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
