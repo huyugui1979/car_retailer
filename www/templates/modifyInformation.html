@@ -1,0 +1,53 @@
+<ion-view title="修改信息">
+    <ion-nav-bar class="bar bar-dark">
+
+        <ion-nav-buttons side="right">
+            <button class="button button-dark" menu-toggle="right" ng-click="success()" type="submit">完成</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+
+        <div class="list">
+            <div>
+                <label class="padding item item-input">
+                    姓名&nbsp;&nbsp;
+                    <input type="text" ng-model="name" placeholder="{{aa.username}}">
+                </label>
+            </div>
+            <div>
+                <label class="padding item item-input">
+                    年龄&nbsp;&nbsp;
+                    <input type="text" ng-model="age" placeholder="{{aa.userage}}">
+                </label>
+
+            </div>
+            <div>
+                <label class="padding item item-input">
+                    邮箱&nbsp;&nbsp;
+                    <input type="email" ng-model="email" placeholder="{{aa.useremail}}">
+                </label>
+            </div>
+            <div>
+                <label class="padding item item-input item-select">
+                    <div class="input-label">
+                        性别
+                    </div>
+                    <select>
+                        <option selected>请选择...</option>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label class="padding item item-input">
+                    联系方式&nbsp;&nbsp;
+                    <input type="tel" ng-model="phone" placeholder="{{aa.userphone}}">
+                </label>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

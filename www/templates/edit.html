@@ -1,4 +1,4 @@
-<ion-view title="意见反馈">
+<ion-view title="问题反馈">
     <ion-nav-bar class="bar bar-dark">
         <ion-nav-buttons side="left">
             <button  class="button  button-dark " menu-toggle="right" ng-click="back()">
@@ -21,10 +21,7 @@
                     <!--&lt;!&ndash;<img id="img" width="500" height="300" />&ndash;&gt;-->
                 <div class="list card">
                     <div class="item item-body">
-                        <img class="full-image" src="">
-                        <p>
-                            click select button below（点击下面选择图片的按钮，选择你要展示的图片）
-                        </p>
+                        <img class="full-image" src="{{imgSrc}}">
                     </div>
 
                 </div>
@@ -33,7 +30,7 @@
                 </button>
 
                 <label class="item item-input">
-                    <textarea placeholder="Description" ></textarea>
+                    <textarea placeholder="问题描述" ></textarea>
                 </label>
 
             </div>

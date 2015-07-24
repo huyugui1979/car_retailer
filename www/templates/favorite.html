@@ -1,23 +1,35 @@
 <ion-view view-title="商家介绍">
-    <ion-nav-bar class="bar bar-dark">
+    <ion-nav-bar class="bar-dark">
         <ion-nav-buttons side="left">
-            <button  class="button  button-dark " menu-toggle="right" ng-click="back()">
+            <button  class="button  button-clear " menu-toggle="right" ng-click="back()">
                 返回
             </button>
         </ion-nav-buttons>
+        <ion-nav-buttons side="right" >
+            <button class="button button-clear" menu-toggle="left" ng-click="update()">修改</button>
+        </ion-nav-buttons>
     </ion-nav-bar>
-    <ion-content>
-        <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-                <img ng-src="{{chat.face}}">
-                <h2>{{chat.name}}</h2>
-                <p>{{chat.lastText}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
 
-                <ion-option-button class="button-assertive" ng-click="remove(chat)">
-                    Delete
-                </ion-option-button>
-            </ion-item>
-        </ion-list>
-    </ion-content>
+        <ion-content style="background: palegreen">
+
+            <div class="list card">
+
+                <div class="item item-avatar">
+                    <img src="img/car3.jpg">
+                    <h2>汽车维修店</h2>
+                    <p>联系方式：13800138000</p>
+                </div>
+
+                <div class="item-body">
+                    <img class="full-image"  src="img/car2.jpg">
+                    <p>
+                        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                        the content is from a card-body consisting of an image and paragraph text. The footer
+                        consists of tabs, icons aligned left, within the card-footer.
+                    </p>
+                </div>
+
+            </div>
+        </ion-content>
+
 </ion-view>

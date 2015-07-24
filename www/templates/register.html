@@ -1,8 +1,5 @@
-<ion-modal-view>
-    <ion-header-bar class="bar bar-dark">
-        <h1 class="title">注册用户</h1>
+<ion-modal-view title="用户注册">
 
-    </ion-header-bar>
     <ion-content>
         <form ng-submit="register">
             <div class="list">
@@ -19,26 +16,18 @@
                         <span class="input-label">以后我们就可以常联系啦^_^</span>
                         <input type="text" placeholder="联系方式">
                     </label>
-                        <!--<label class="item item-input item-select">-->
-                            <!--<div class="input-label">-->
-                                <!--我猜你是-->
-                            <!--</div>-->
-                            <!--<select>-->
-                                <!--<option>先生</option>-->
-                                <!--<option selected>女士</option>-->
-
-                            <!--</select>-->
-                        <!--</label>-->
 
 
-                    <label class="item item-input item-select">
+
+                    <label class="item item-input item-select ">
 
                         <div class="input-label">
-
+                            <p>你好{{customer}}
+                            </p>
                         </div>
 
                         <select >
-                            <option >女士</option>
+                            <option selected >女士</option>
                             <option >先生</option>
                         </select>
                     </label>
@@ -49,7 +38,8 @@
                     </label>
 
                 <button class="button button-block button-calm" type="submit" ng-click="showAlert()">注册</button>
-                <button class="button button-block button-assertive" type="cancel" ng-click="back()">待会再来吧</button>
+                <button class="button button-block button-assertive"type="cancel" ng-click="back()">
+                    待会再来吧</button>
             </div>
         </form>
     </ion-content>

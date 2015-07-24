@@ -1,0 +1,26 @@
+<ion-view view-title="我的门店">
+    <ion-nav-bar  class="bar-calm">
+
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="add()">
+                添加分店
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list ng-repeat="ds in data">
+            <ion-item ng-click="final()">
+                <img src="{{ds.image}}"  style="width: 30%;float: left">
+                <h2 style="float: left;margin-left: 20px">{{ds.name}} </h2>
+
+                <p style="float: left;margin-left: 20px;margin-top: 30px">地址：{{ds.address}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

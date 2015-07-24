@@ -1,34 +1,60 @@
-<ion-view view-title="留言" class="bar-positive">
-    <ion-nav-bar class="bar-positive">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
+<ion-view view-title="查看留言" style="background: mediumpurple">
+    <ion-nav-bar class="bar-royal">
+
         <ion-nav-buttons side="left">
             <button  class="button  button-clear " menu-toggle="left" ng-click="back()">
                 返回
             </button>
 
         </ion-nav-buttons>
-        <ion-nav-buttons side="right">
-            <button  class="button  button-clear " menu-toggle="right" ng-click="fanhui1()">
-                留言区
-            </button>
-        </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
-        <div>
-        <form id="post" ng-submit="form.submit()">
-    <label class="item item-input"  style="width: 96%; margin-left: 2%;margin-top: 2%" >
-        <div>
-        <textarea ng-model="form.content" placeholder="说点什么吧！" style="height: 50px;"></textarea>
+        <div class="list card">
+
+            <div class="item item-avatar" >
+                <img src="img/car3.jpg">
+                <h2>小红</h2>
+
+            </div>
+            <div class="item item-body">
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                    the content is from a card-body consisting of an image and paragraph text. The footer
+                    consists of tabs, icons aligned left, within the card-footer.
+                </p>
+            </div>
         </div>
-    </label>
-            <button type="submit" class="button bar-positive" style="float: right;margin-right: 2%;width: 18%;">send</button>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/car3.jpg">
+                <h2>小蓝</h2>
 
+            </div>
 
+            <div class="item item-body">
 
-        </form>
-        </div>
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                    the content is from a card-body consisting of an image and paragraph text. The footer
+                    consists of tabs, icons aligned left, within the card-footer.
+                </p>
+            </div>
+            </div>
+            <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/car3.jpg">
+                <h2>小青</h2>
 
+            </div>
 
+            <div class="item item-body">
+
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                    the content is from a card-body consisting of an image and paragraph text. The footer
+                    consists of tabs, icons aligned left, within the card-footer.
+                </p>
+            </div>
+</div>
     </ion-content>
 </ion-view>

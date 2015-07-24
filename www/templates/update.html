@@ -1,0 +1,43 @@
+<ion-view view-title="编辑简介">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" menu-toggle="left" ng-click="save()">提交</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content>
+        <form id="post" ng-submit="form.submit()">
+            <div class="list card">
+                <div class="item item-avatar">
+                    <img   src="{{imgSrc}}">
+                    <img style="width: 30%;height: auto;float: right" src="img/add1.png" ng-show="kk" ng-click="pickImage()">
+
+
+                    <h2>尔康汽车维修店</h2>
+                    <label class="item-input">
+                        <input type="text" placeholder="联系方式" style="max-height: 100px">
+                    </label>
+                </div>
+
+                <!--商家上传图片-->
+                <div class="item item-body">
+                <img class="full-image" src="{{imgSrc1}}" >
+                    <button class="button button-full button-balanced" ng-click="pickImage1()">
+                        上传图片
+                    </button>
+                   <!--商家添加文字描述-->
+                    <label class="item item-input">
+                        <textarea placeholder="文字简介" ></textarea>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </ion-content>
+
+</ion-view>

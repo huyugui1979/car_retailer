@@ -1,30 +1,76 @@
 
-<ion-view view-title="汽车维修服务论坛">
+<ion-view title="汽车维修服务平台" >
 
-    <div class="bar bar-subheader item-input-inset bar-stable">
-      <label class="item-input-wrapper">
-        <i class="icon ion-search "></i>
-        <input type="search" placeholder="search"/>
-      </label>
+
+  <ion-content style="background-color:white">
+
+    <div class="second9">
+      <ion-slide-box does-continue="true" show-pager="true" auto-play="true">
+        <ion-slide>
+          <div>
+            <img src="img/show1.png" class="other-img">
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div >
+            <img src="img/show2.png" class="other-img">
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div >
+            <img src="img/show3.png" class="other-img">
+          </div>
+        </ion-slide>
+      </ion-slide-box>
     </div>
 
-    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()">
-    </ion-refresher>
 
-    <ion-content>
-           <div class="item item-img">
-             <img src="img/car5.jpg" style="width: 100%">
-             <li>
-             <p style="white-space: normal">欢迎您进入汽车服务平台，我们将竭诚为您服务，以下是我们的服务案例之一，希望能够为您提供最优质的服务</p>
-             </li>
-             <li>
-               <p style="white-space: normal">欢迎您进入汽车服务平台，我们将竭诚为您服务，以下是我们的服务案例之一，希望能够为您提供最优质的服务</p>
-             </li>
-             <li>
-               <p style="white-space: normal">欢迎您进入汽车服务平台，我们将竭诚为您服务，以下是我们的服务案例之一，希望能够为您提供最优质的服务</p>
-             </li>
-           </div>
+      <div class="row">
+        <div class="col positive-bg light" ng-click="chat()">
+          <div>案例编辑</div>
+          <i class="icon ion-edit"></i>
+        </div>
+        <div class="col  dark-bg light" ng-click="product()">
+          <div>服务项目上传</div>
+          <i class="icon ion-android-checkbox-outline "></i>
+        </div>
 
-  </ion-content>
+          <div class="col  energized-bg light" ng-click="sale()">
+            <div>优惠活动</div>
+            <i class="icon ion-social-yen"></i>
+          </div>
 
-</ion-view>
+      </div>
+    <div class="row" >
+        <div class="col  calm-bg light" ng-click="direct()">
+          <div>门店位置</div>
+          <i class="icon ion-model-s"></i>
+        </div>
+        <div class="col balanced-bg light" ng-click="show()">
+          <div>商家介绍</div>
+          <i class="icon ion-ios-information-outline"></i>
+        </div>
+
+        <div class="col  assertive-bg light" ng-click="about()">
+          <div>关于我们</div>
+          <i class="icon ion-person-stalker"></i>
+        </div>
+
+    </div>
+
+      <div class="row">
+        <div class="col royal-bg dark" ng-click="note()">
+          <div>查看留言</div>
+          <i class="icon ion-pricetag"></i>
+        </div>
+        <div class="col  positive-bg dark" ng-click="check()">
+          <div>预约情况</div>
+          <i class="icon ion-ios-search-strong"></i>
+        </div>
+        <div class="col  stable-bg dark" ng-click="help()">
+          <div>产品帮助</div>
+          <i class="icon ion-ios-help-outline"></i>
+        </div>
+    </div>
+</ion-content>
+  </ion-view>

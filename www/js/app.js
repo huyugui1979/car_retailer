@@ -51,23 +51,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
 
       })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.dash', {
+      url: '/dash',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-dash': {
+          templateUrl: 'templates/tab-dash.html',
+          controller: 'DashCtrl'
         }
       }
     })
-      .state('tab.dash', {
-        url: '/dash',
-        views: {
-          'tab-dash': {
-            templateUrl: 'templates/tab-dash.html',
-            controller: 'DashCtrl'
-          }
-        }
+      .state('address', {
+        url: '/address',
+            templateUrl: 'templates/address.html',
+            controller: 'AddressCtrl'
       })
       .state('edit',{
         url:'/edit',
@@ -81,15 +77,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
         controller: 'SettingsCtrl'
 
       })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
       .state('tab.account', {
         url: '/account',
         views: {
@@ -114,16 +101,69 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
         templateUrl:'templates/favorite.html',
         controller:'FavoriteCtrl'
       })
-      .state('orders',{
-        url:'/orders',
-        templateUrl:'templates/orders.html',
-        controller:'OrdersCtrl'
-      })
+
       .state('message',{
-        url:'/orders',
+        url:'/message',
         templateUrl:'templates/message.html',
         controller:'MessageCtrl'
-      });
+      })
+      .state('products',{
+          url:'/products',
+          templateUrl:'templates/products.html',
+          controller:'ProductsCtrl'
+      })
+      .state('direct',{
+          ul:'/direct',
+          templateUrl:'templates/direct.html',
+          controller:'DirectCtrl'
+      })
+      .state('sale',{
+          ul:'/sale',
+          templateUrl:'templates/sale.html',
+          controller:'SaleCtrl'
+      })
+      .state('update',{
+          ul:'/update',
+          templateUrl:'templates/update.html',
+          controller:'UpdateCtrl'
+      })
+      .state('editor',{
+          ul:'/editor',
+          templateUrl:'templates/editor.html',
+          controller:'EditorCtrl'
+      })
+      .state('help',{
+          ul:'/help',
+          templateUrl:'templates/help.html',
+          controller:'HelpCtrl'
+      })
+      .state('about',{
+          ul:'/about',
+          templateUrl:'templates/about.html',
+          controller:'AboutCtrl'
+      })
+
+      .state('login',{
+          ul:'/login',
+          templateUrl:'templates/login.html',
+          controller:'LoginCtrl'
+      })
+      .state('show',{
+          ul:'/show',
+          templateUrl:'templates/show.html',
+          controller:'ShowCtrl'
+      })
+      .state('add',{
+          ul:'/add',
+          templateUrl:'templates/add.html',
+          controller:'AddCtrl'
+      })
+
+      .state('modifyInformation',{
+          url:'/modifyInformation',
+          templateUrl:'templates/modifyInformation.html',
+          controller:'ModifyInformationCtrl'
+      })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');

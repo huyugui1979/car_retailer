@@ -1,0 +1,38 @@
+<ion-view title="添加产品">
+
+        <ion-nav-buttons side="right">
+    <!--保存并提交-->
+    <button class="button button-clear" menu-toggle="left" ng-click="save()" >
+        提交
+    </button>
+</ion-nav-buttons>
+    <ion-nav-buttons side="left">
+        <!--保存并提交-->
+        <button class="button button-clear" menu-toggle="left" ng-click="fanhui()" >
+            返回
+        </button>
+    </ion-nav-buttons>
+
+
+    <ion-content >
+
+    <div class="item" >
+
+        <!--<img src="{{imgSrc}}" ng-click="pickImage()">-->
+
+        <div class="item item-input">
+
+           <input type="text" placeholder="请输入添加的服务项目名称"  ng-model="">
+
+        </div>
+       <div class="item item-input" style="margin-top: 20px">
+            <textarea placeholder="服务项目描述" style="max-height: 100px;width: 100%;height: 200px" ng-model=""></textarea>
+      </div>
+        <div class="item">
+            <img src="img/add2.jpg" style="width: 100%" ng-click="pickImage()" ng-show="kk">
+            <img src="{{imgSrc}}" style="width: 100%" ng-click="pickImage()" ng-show="ff">
+        </div>
+    </div>
+
+</ion-content>
+</ion-view>

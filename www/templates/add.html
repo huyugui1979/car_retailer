@@ -1,0 +1,59 @@
+<ion-view view-title="案例编辑">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-buttons side="left">
+            <button class="button button-clear"  menu-toggle="right" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+        <button class="button button-clear"  menu-toggle="right" ng-click="pickImage()">
+            添加图片
+        </button>
+        </ion-nav-buttons>
+        </ion-nav-bar>
+    <ion-content>
+
+        <div class="list card"  ng-repeat="na in data" >
+
+                <img  class="edit-img " src="{{imgSrc}}" style="float: left;width: 40%;margin-left: 1%;margin-top: 1%;height: 150px;">
+
+
+                    <textarea style="margin-right: 45%" placeholder="案例描述" ></textarea>
+
+        </div>
+        <div class="list card"  ng-repeat="na in data" >
+
+            <img  class="edit-img" src="{{imgSrc1}}" style="float: left;width: 40%;margin-left: 1%;margin-top: 1%;height: 150px;">
+
+
+
+            <textarea style="margin-right: 45%" placeholder="案例描述" ></textarea>
+
+        </div>
+        <div class="list card"  ng-repeat="na in data" >
+
+            <img  class="edit-img" src="{{imgSrc2}}" style="float: left;width: 40%;margin-left: 1%;margin-top: 1%;height: 150px;">
+
+
+
+            <textarea style="margin-right: 45%" placeholder="案例描述" ></textarea>
+
+        </div>
+        <div class="list card"  ng-repeat="na in data" >
+
+            <img  class="edit-img" src="{{imgSrc3}}" style="float: left;width: 40%;margin-left: 1%;margin-top: 1%;height: 150px;">
+
+
+
+            <textarea style="margin-right: 45%" placeholder="案例描述" ></textarea>
+
+        </div>
+
+        <div class="button-bar">
+            <button type="button" class="button button-stable"
+                    on-tap="addExpense()">保存</button>
+        </div>
+
+    </ion-content>
+</ion-view>
+
