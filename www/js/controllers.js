@@ -17,6 +17,8 @@ angular.module('starter.controllers', ["ionic"])
             $state.go('feedback')
         }
 
+
+
         $scope.data =[
             {
                 user:'We manufacture, in a very awkward time。' +
@@ -33,12 +35,14 @@ angular.module('starter.controllers', ["ionic"])
 
             }
         ]
+
+
         $scope.pickImage = function () {
 
             console.log("haha");
 
             var options = {
-                maximumImagesCount: 4,
+                maximumImagesCount:1,
                 width: 800,
                 height: 800,
                 quality: 80
@@ -47,15 +51,18 @@ angular.module('starter.controllers', ["ionic"])
             $cordovaImagePicker.getPictures(options)
                 .then(function (results) {
                     console.log(results);
-                    $scope.imgSrc = results[0]
-                    $scope.imgSrc1 = results[1]
-                    $scope.imgSrc2 = results[2]
-                    $scope.imgSrc3 = results[3];
+                    $scope.imgSrc = results[0];
+                    //$scope.imgSrc1 = results[1]
+                    //$scope.imgSrc2 = results[2]
+                    //$scope.imgSrc3 = results[3];
                 }, function (error) {
                     // error getting photos
                 });
 
         }
+
+
+
     })
 
 
@@ -102,12 +109,13 @@ angular.module('starter.controllers', ["ionic"])
 
 
     //分店位置
-    .controller('DirectCtrl',function( $ionicGesture,$scope,$state, $window, $interval,$ionicPopup){
+    .controller('DirectCtrl',function( $ionicGesture,$scope,$state){
 
     $scope.store = {};
     $scope.data = [
         {
-            user:"134",name:"XXX汽车维修店红旗店",
+            user:"134",
+            name:"XXX汽车维修店红旗店",
             address:'珠海市金湾区科干院',
             image:'img/car5.jpg'
         },
@@ -223,7 +231,7 @@ angular.module('starter.controllers', ["ionic"])
     })
 
 
-    //案例编辑
+    //案例展示
     .controller('FeedbackCtrl', function ($scope,$state){
 
 
@@ -500,7 +508,8 @@ angular.module('starter.controllers', ["ionic"])
 
 
     //首页
-    .controller('DashCtrl',function($scope,$state) {
+    .controller('DashCtrl',function($scope,$state,$rootScope) {
+
 
         $scope.show = function(){
             $state.go("favorite")
