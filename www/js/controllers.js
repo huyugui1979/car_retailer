@@ -6,10 +6,7 @@ angular.module('starter.controllers', ["ionic"])
             $state.go('tab.dash')
         }
     })
-
-
-
-    //案例编辑
+    //案例编辑@@@@@@@@@
     .controller('AddCtrl',function($scope,$cordovaImagePicker,$state){
 
 
@@ -219,11 +216,20 @@ angular.module('starter.controllers', ["ionic"])
         $scope.update = function () {
             $state.go("update");
         }
+        $scope.data = {
+            name:'汽车维修店',
+            phone:'13800138000',
+            image:'img/car2.jpg',
+            desc:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                    'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                    'consists of tabs, icons aligned left, within the card-footer.'
+
+        }
 
     })
 
 
-    //案例编辑
+    //案例编辑@@@@@@@@@@
     .controller('FeedbackCtrl', function ($scope,$state){
 
 
@@ -304,6 +310,26 @@ angular.module('starter.controllers', ["ionic"])
         $scope.back = function(){
             $state.go("tab.dash");
         };
+        $scope.data = [
+            {
+                user:{name:'小红'},
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                        'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                        'consists of tabs, icons aligned left, within the card-footer.'
+            },
+            {
+                user:{name:'小蓝'},
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                'consists of tabs, icons aligned left, within the card-footer.'
+            },
+            {
+                user:{name:'小青'},
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                'consists of tabs, icons aligned left, within the card-footer.'
+            }
+        ]
 
     })
 
@@ -329,26 +355,39 @@ angular.module('starter.controllers', ["ionic"])
     })
 
 
-    //产品展示
-    .controller('ProductsCtrl',function($scope,$cordovaImagePicker,$state){
+    //服务项目@@@@@@
+    .controller('ProductsCtrl',function($ionicPopup,$scope,$cordovaImagePicker,$state){
         $scope.back = function(){
             $state.go("tab.dash");
         }
         $scope.add = function(){
             $state.go("show");
         }
+
         $scope.data = [
             {
+                id:0,
                 name:'洗车',
                 desc:'高压洗车，无接触洗车',
                 image:'img/car1.jpg'
             },
             {
+                id:1,
                 name:'美容',
                 desc:'车身美容、内部美容、漆面处理、汽车防护',
                 image:'img/car2.jpg'
             }
         ]
+
+            $scope.edit = function(aa){
+
+
+                $ionicPopup.alert({
+                    title: '抱歉~',
+                    template:aa
+                })
+            };
+
 
 
 
@@ -371,7 +410,7 @@ angular.module('starter.controllers', ["ionic"])
 
 
 
-    //优惠活动
+    //优惠活动@@@@@@@
     .controller('SaleCtrl',function($scope,$state){
         $scope.back = function() {
             $state.go("tab.dash");
@@ -380,6 +419,29 @@ angular.module('starter.controllers', ["ionic"])
             $state.go("editor");
 
         }
+        $scope.data = [
+            {
+                title:'新客户套餐',
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                        'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                        'consists of tabs, icons aligned left, within the card-footer.',
+                image:'img/car3.jpg'
+            },
+            {
+                title:'新客户套餐',
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                'consists of tabs, icons aligned left, within the card-footer.',
+                image:'img/car3.jpg'
+            },
+            {
+                title:'新客户套餐',
+                content:'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,'+
+                'the content is from a card-body consisting of an image and paragraph text. The footer'+
+                'consists of tabs, icons aligned left, within the card-footer.',
+                image:'img/car3.jpg'
+            }
+        ]
     })
 
 

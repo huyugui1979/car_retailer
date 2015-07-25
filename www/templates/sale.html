@@ -13,44 +13,18 @@
     </ion-nav-bar>
     <ion-content style="background: gold">
 
-        <div class="list card">
-            <div><h2>新客户套餐</h2></div>
+        <div class="list card" ng-repeat="activity in data">
+            <div><h2>{{activity.title}}</h2></div>
             <div class="item item-body">
-                <h2>消费满1000返现100</h2>
-                <img src="img/car3.jpg" style="width: 100%">
+
+                <img src="{{activity.image}}" style="width: 100%">
             </div>
             <div class="item item-body">
-                <p>This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.</p>
+                <p>
+                    {{activity.content}}</p>
                 <p>
             </div>
         </div>
-        <div class="list card">
-            <div><h2>老顾客套餐</h2></div>
-            <div class="item item-body">
-                <h2>消费满2000返现300</h2>
-                <img src="img/car2.jpg"style="width: 100%" >
-            </div>
-            <div class="item item-body">
-                <p>This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.</p>
-                <p>
-            </div>
-        </div>
-        <div class="list card">
-            <div><h2>VIP套餐</h2></div>
-            <div class="item item-body">
-                <h2>消费满3000返现500</h2>
-                <img src="img/car1.jpg"style="width: 100%">
-            </div>
-            <div class="item item-body">
-                <p>This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.</p>
-                <p>
-            </div>
         </div>
 
 
